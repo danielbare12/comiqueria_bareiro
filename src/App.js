@@ -2,7 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  return <h1>BIENVENIDOS A LA COMIQUERIA BAREIRO</h1>;
+  return (<div className='App'>
+    <h1>Bienvenidos a comiqueria Bareiro</h1>
+  </div>);
 }
 
 export default App;
