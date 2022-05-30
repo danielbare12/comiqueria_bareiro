@@ -1,10 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
+import NavBar from './components/NavBar'
 
 function App() {
-  return (<div className='App'>
-    <h1>Bienvenidos a comiqueria Bareiro</h1>
-  </div>);
+  return (<>
+  <NavBar/>
+  </>
+  );
 }
 
 export default App;
