@@ -7,7 +7,7 @@ function NavBar() {
 
       <div className="container-fluid">
         <div className="container">
-          <MiLogo />
+          <a href="#"><MiLogo /></a>
 
         </div>
         <div className="collapse navbar-collapse" id="navbarNav">
@@ -22,7 +22,7 @@ function NavBar() {
               <a className="nav-link active" href="#">Contacto</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link active" href="#">Contacto</a>
+              <a className="nav-link active" href="#">Nosotros</a>
             </li>
           </ul>
         </div>
