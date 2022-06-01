@@ -1,10 +1,11 @@
 import './App.css';
+import ItemListContainer from './components/ItemListContainer';
 import NavBar from './components/NavBar'
 
 function App() {
   return (<>
   <NavBar/>
-  <h1>BIENVENIDOS A COMIQUERIA BAREIRO</h1>
+  <ItemListContainer greeting={"BIENVENIDOS A COMIQUERIA BAREIRO!!!!"}/>
   </>
   );
 }

@@ -18,4 +18,12 @@ code {
 
 h1 {
   text-align: center;
+  text-decoration: underline wavy;
+  background-color: aquamarine;
+  margin-top: 2%;
+}
+
+.carrito{
+  display: flex;
+  flex-direction: row;
 }

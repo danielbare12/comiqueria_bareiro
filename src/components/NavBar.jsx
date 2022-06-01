@@ -1,5 +1,6 @@
 import React from 'react'
 import MiLogo from './MiLogo'
+import CartWidget from './CartWidget'
 
 function NavBar() {
   return (
@@ -25,6 +26,10 @@ function NavBar() {
               <a className="nav-link active" href="#">Nosotros</a>
             </li>
           </ul>
+        </div>
+        <div className='carrito'>
+          <CartWidget cantidad={8}/>
+
         </div>
       </div>
     </nav>
