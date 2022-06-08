@@ -62,3 +62,9 @@ h1 {
 .card-text{
   font-size: 100%;
 }
+
+.botonesCantidad{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
