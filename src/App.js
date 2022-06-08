@@ -12,7 +12,7 @@ function App() {
 
   return (<>
   <NavBar/>
-  <ItemListContainer greeting={"BIENVENIDOS A COMIQUERIA BAREIRO!!!!"}/>
+  <ItemListContainer greetings={"BIENVENIDOS A COMIQUERIA BAREIRO!!!!"}/>
   <ItemCount inicial={1} stock={5} onAdd = {onAdd}/>
   </>
   );

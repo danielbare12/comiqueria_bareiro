@@ -16,6 +16,10 @@ code {
   background-color: #b6c2d9;
 }
 
+main {
+  margin: 5%;
+}
+
 h1 {
   text-align: center;
   text-decoration: underline wavy;
@@ -28,3 +32,33 @@ h1 {
   flex-direction: row;
 }
 
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.card-title{
+  font-size: 100%;
+}
+
+.card {
+  width: 70%;
+
+  background-color: #fff59d;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+#listaProductos {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  justify-content: center;
+  grid-row-gap: 20px;
+}
+
+.card-text{
+  font-size: 100%;
+}
