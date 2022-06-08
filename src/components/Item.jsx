@@ -17,6 +17,7 @@ function Item({ producto }) {
         <p className="card-text">Autor: {autor}</p>
         <p className="card-text">Precio: {precio}</p>
         <div><ItemCount inicial={1} stock={5} onAdd = {onAdd}/></div>
+        <button>Detalles</button>
       </div>
       <div className='card'></div>
       </div>
