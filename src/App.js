@@ -7,8 +7,8 @@ function App() {
 
   return (<>
     <NavBar />
-    {/*<ItemListContainer greetings={"BIENVENIDOS A COMIQUERIA BAREIRO!!!!"} />*/}
-    <ItemDetailContainer idPedido={5}/>
+    <ItemListContainer greetings={"BIENVENIDOS A COMIQUERIA BAREIRO!!!!"} />
+    <ItemDetailContainer idPedido={4}/>
   </>
   );
 }
