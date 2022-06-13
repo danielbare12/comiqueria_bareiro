@@ -66,5 +66,15 @@ h1 {
 .botonesCantidad{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: left;
+}
+
+.detalleProducto{
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-column-gap: 20px;
+}
+
+.imagenDetalle{
+  width: 100%;
 }

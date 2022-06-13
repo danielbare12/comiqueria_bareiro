@@ -1,12 +1,14 @@
 import './App.css';
+import ItemDetailContainer from './components/ItemDetailContainer';
 import ItemListContainer from './components/ItemListContainer';
-import NavBar from './components/NavBar'
+import NavBar from './components/NavBar';
 
 function App() {
 
   return (<>
-  <NavBar/>
-  <ItemListContainer greetings={"BIENVENIDOS A COMIQUERIA BAREIRO!!!!"}/>
+    <NavBar />
+    {/*<ItemListContainer greetings={"BIENVENIDOS A COMIQUERIA BAREIRO!!!!"} />*/}
+    <ItemDetailContainer idPedido={5}/>
   </>
   );
 }

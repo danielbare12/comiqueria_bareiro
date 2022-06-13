@@ -36,7 +36,7 @@ function ItemListContainer({ greetings }) {
 
   return (
     <main>
-      <h1>{greetings}</h1>
+      <h1>{/*greetings*/}</h1>
       <div>{cargando && "CARGANDO......"} </div>
       <div>{error && "Error en la carga"}</div>
       <div id='listaProductos'>
