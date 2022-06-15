@@ -13,15 +13,16 @@ function ItemDetailContainer() {
     useEffect(() => {
 
 
-        const getItem = fetch('https://mocki.io/v1/bb0fff3b-75fb-4f92-896c-a856433f661c');
-        getItem
+        setTimeout(() => {
+            fetch('https://mocki.io/v1/bb0fff3b-75fb-4f92-896c-a856433f661c')
             .then(res => res.json())
             .then(listaProductos => setItem(listaProductos.find((producto) => producto.id == idPedido)))
             .catch((error) => {
                 setError(true);
                 console("Error", error);
             })
-            .finally(() => setCargando(false));
+            .finally(() => setCargando(false))
+        }, 2000);
 
     }, [idPedido])
 
