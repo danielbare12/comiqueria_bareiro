@@ -7,8 +7,6 @@ function ItemCount({ inicial, stock, onAdd }) {
     const sumar = () => {
         if (contador < stock) {
             setContador(contador + 1);
-        } else {
-            alert("No podes agregar mas productos no hay stock disponible");
         }
     }
 
