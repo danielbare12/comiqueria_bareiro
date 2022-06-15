@@ -14,14 +14,12 @@ function NavBar() {
         </div>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
+
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to='/item/'>Productos</Link>
+              <Link className="nav-link active botonCategoria" aria-current="page" to='/category/comic'>Comic</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to='/category/comic'>Comic</Link>
-            </li>
-            <li className="nav-item">
-            <Link className="nav-link active" aria-current="page" to='/category/manga'>Manga</Link>
+              <Link className="nav-link active botonCategoria" aria-current="page" to='/category/manga'>Manga</Link>
             </li>
           </ul>
         </div>

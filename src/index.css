@@ -16,6 +16,10 @@ code {
   background-color: #b6c2d9;
 }
 
+.botonCategoria:hover{
+  background-color: #8692a7;
+}
+
 main {
   margin: 5%;
 }
@@ -84,6 +88,10 @@ h1 {
 
 .imagenDetalle{
   width: 100%;
+}
+
+.categoria{
+  text-transform: capitalize;
 }
 
 footer{
