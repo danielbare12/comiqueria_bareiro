@@ -4,6 +4,7 @@ import ItemListContainer from './components/ItemListContainer';
 import NavBar from './components/NavBar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Footer from './components/Footer';
+import Cart from './components/Cart';
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/home" element={<ItemListContainer greetings={"BIENVENIDOS A COMIQUERIA BAREIRO!!!!"} />} />
         <Route path="/item/:idPedido" element={<ItemDetailContainer />} />
         <Route path="/category/:idCategoria" element={<ItemListContainer greetings={"Categoria: "} />} />
+        <Route path="/cart" element={<Cart/>} />
       </Routes>
       <Footer />
     </BrowserRouter>

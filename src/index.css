@@ -94,6 +94,13 @@ h1 {
   text-transform: capitalize;
 }
 
+.botonCarrito{
+  margin-right: 20px;
+  color: black;
+  text-align: center;
+  text-decoration-line: none;
+}
+
 footer{
   padding-right: 5%;
     padding-left: 5%;
