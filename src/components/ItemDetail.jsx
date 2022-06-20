@@ -6,7 +6,7 @@ function ItemDetail({producto}) {
     const {id, titulo,editorial ,categoria, descripcion, precio, autor, imagen} = producto;
     const [productoComprado,setProductoComprado] = useState(false);
     const onAdd = (cant) => {
-      (productoComprado == false)?setProductoComprado(true):setProductoComprado(false);
+      setProductoComprado(true)
       
       alert(`La cantidad de productos agregados es ${cant} de ${titulo}`)
   
