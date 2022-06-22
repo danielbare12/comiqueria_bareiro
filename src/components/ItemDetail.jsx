@@ -1,15 +1,19 @@
 import React, {useState} from 'react'
 import { Link } from 'react-router-dom';
-import ItemCount from './ItemCount.jsx'
+import ItemCount from './ItemCount.jsx';
+import { CartContext } from '../context/CartContext.jsx';
+import { useContext } from 'react';
 
 function ItemDetail({producto}) {
+    const {addItem,isInCart} = useContext(CartContext);
     const {id, titulo,editorial ,categoria, descripcion, precio, autor, imagen} = producto;
     const [productoComprado,setProductoComprado] = useState(false);
+
     const onAdd = (cant) => {
       setProductoComprado(true)
-      
+      addItem(producto,cant);
       alert(`La cantidad de productos agregados es ${cant} de ${titulo}`)
-  
+      console.log(isInCart(id))
     }
   return (
     <div className='detalleProducto'>

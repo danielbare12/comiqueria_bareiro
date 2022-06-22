@@ -101,6 +101,21 @@ h1 {
   text-decoration-line: none;
 }
 
+.productoCarrito {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  border: black 1px groove;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 1%;
+  background-color: #4db6ac;
+
+}
+
+.imagenCarrito {
+  width: 50%;
+}
+
 footer{
   padding-right: 5%;
     padding-left: 5%;

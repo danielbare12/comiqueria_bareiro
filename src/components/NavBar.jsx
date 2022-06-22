@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import MiLogo from './MiLogo'
 import CartWidget from './CartWidget'
 import { Link } from 'react-router-dom'
+import { CartContext } from '../context/CartContext'
 
 function NavBar() {
+  const {cantidadCarrito} = useContext(CartContext);
   return (
     <nav className="navbar navbar-expand-lg navbar-light miBarra">
 
@@ -24,7 +26,9 @@ function NavBar() {
           </ul>
         </div>
         <div className='carrito'>
-          <CartWidget cantidad={8} />
+          <Link to = '/cart'>
+          <CartWidget cantidad={cantidadCarrito} />
+          </Link>
 
         </div>
       </div>
