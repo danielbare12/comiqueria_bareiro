@@ -1,19 +1,25 @@
 import React from 'react'
 import { useContext } from 'react'
 import { CartContext } from '../context/CartContext'
+import { Link } from 'react-router-dom'
 import Item from './Item';
 import ItemCart from './ItemCart';
 
 function Cart() {
-  const { cart , clear, precioTotal} = useContext(CartContext);
+  const { cart, clear, precioTotal, cantidadCarrito } = useContext(CartContext);
+
+  const mainCart = <main className='mainCarrito'>
+    {cart.map(comic => <ItemCart key={comic.id} producto={comic} />)}
+    <div>Precio Total: {precioTotal}</div>
+    <button onClick={clear}>Vaciar Carrito</button>
+    <button onClick={clear}>Terminar Compra</button>
+  </main>
+
+  const vacio = <div className='tituloCarroVacio'><h1>Carrito Vacio </h1><Link to="/" >  Ir a comprar</Link></div>
 
   return (
     <>
-    <main className='mainCarrito'>
-      {cart.map(comic => <ItemCart key={comic.id} producto={comic} />)}
-      <div>Precio Total: {precioTotal}</div>
-      <button onClick={clear}>Vaciar Carrito</button>
-      </main>
+      {(cantidadCarrito == 0)?vacio:mainCart}
     </>
   )
 }

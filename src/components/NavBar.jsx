@@ -26,7 +26,7 @@ function NavBar() {
           </ul>
         </div>
         <div className='carrito'>
-          <Link to = '/cart'>
+          <Link className='carritoLink' to = '/cart'>
           <CartWidget cantidad={cantidadCarrito} />
           </Link>
 

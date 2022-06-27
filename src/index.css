@@ -116,6 +116,16 @@ h1 {
   width: 50%;
 }
 
+.carritoLink{
+  text-decoration: none;
+  color: black;
+}
+
+.tituloCarroVacio {
+  margin-top: 20%;
+  margin-bottom: 15%;
+}
+
 footer{
   padding-right: 5%;
     padding-left: 5%;

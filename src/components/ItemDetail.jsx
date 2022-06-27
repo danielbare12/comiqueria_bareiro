@@ -25,7 +25,7 @@ function ItemDetail({producto}) {
       <p className='categoria'>Categoria: {categoria}</p>
       <p className="">Precio: ${precio}</p>
       <p className=''>Descripcion: {descripcion}</p>
-      <div>{productoComprado?<><Link className='botonCarrito' to='/cart'>Ir al carrito</Link><Link className='botonCarrito' to='/'>Seguir Comprando</Link></>:<ItemCount inicial={1} stock={5} onAdd = {onAdd}/>}</div>
+      <div>{productoComprado?<><Link className='botonCarrito' to='/cart'>Terminar la compra</Link><Link className='botonCarrito' to='/'>Seguir Comprando</Link></>:<ItemCount inicial={1} stock={5} onAdd = {onAdd}/>}</div>
     </div>
     </div>
   )

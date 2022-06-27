@@ -18,6 +18,7 @@ function MyProvider({children}) {
           const pos = cart.indexOf(productoEnCarrito)
           const aux = [...cart];
           aux[pos].cantidad += cantidad
+          setCart(aux);
         } else {
           const aux = [...cart]
           aux.push(nuevoItem);
@@ -36,7 +37,7 @@ function MyProvider({children}) {
 
     const isInCart = (itemid) => {return cart.some((producto) => producto.id === itemid)};
 
-    const cantidadCarrito = cart.length;
+    const cantidadCarrito = cart.reduce((acc,x) => acc + x.cantidad,0)
 
     const precioTotal = cart.reduce((acc,x) => acc + x.precio*x.cantidad,0)
     
