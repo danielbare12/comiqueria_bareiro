@@ -39,7 +39,7 @@ function MyProvider({children}) {
 
     const cantidadCarrito = cart.reduce((acc,x) => acc + x.cantidad,0)
 
-    const precioTotal = cart.reduce((acc,x) => acc + x.precio*x.cantidad,0)
+    const precioTotal = cart.reduce((acc,x) => acc + x.price*x.cantidad,0)
     
 
   return (

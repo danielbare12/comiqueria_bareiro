@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import ItemList from './ItemList';
 import { useParams } from 'react-router-dom';
+import { collection, getDocs,getFirestore,query,where } from 'firebase/firestore';
 
 
 function ItemListContainer({ greetings }) {
@@ -10,17 +11,24 @@ function ItemListContainer({ greetings }) {
   const [error, setError] = useState(false);
   const [productos, setProductos] = useState([]);
 
+  //aca esta la llamada al firebase
+  const coll = 'items';
+  const db = getFirestore();
+
+  const itemCollection = (idCategoria==undefined)?collection(db,coll):query(collection(db,coll),where('category','==',idCategoria));
+
   useEffect(() => {
-    setTimeout(() => {
-      fetch("https://mocki.io/v1/bb0fff3b-75fb-4f92-896c-a856433f661c")
-      .then(res => res.json())
-      .then(listaproductos => setProductos((idCategoria == undefined) ? listaproductos : listaproductos.filter((producto) => producto.categoria == idCategoria)))
+   
+      getDocs(itemCollection)
+      .then(res => {
+        setProductos(res.docs.map((doc)=>({id:doc.id,...doc.data()})));
+      })
       .catch((error) => {
         setError(true);
-        console("Error", error);
+        console.log("Error", error);
       })
       .finally(() => setCargando(false))
-    }, 2000);
+
 
   }, [idCategoria])
 

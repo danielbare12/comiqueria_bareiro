@@ -4,20 +4,20 @@ import { CartContext } from '../context/CartContext';
 
 function ItemCart({ producto }) {
     const {removeItem} = useContext(CartContext);
-    const {id, titulo, autor, precio, cantidad , imagen} = producto;
+    const {id, title, author, price, cantidad , image} = producto;
     return (
         <div className='productoCarrito'>
             <div>
-                <img className="imagenCarrito" src={imagen} alt="" />
+                <img className="imagenCarrito" src={image} alt="" />
             </div>
             <div className="descripcionCarrito">
                 <div>
-                    <h2 className="tituloProducto">{titulo}</h2>
-                    <p>Autor: {autor}</p>
-                    <p>Precio: ${precio}</p>
+                    <h2 className="tituloProducto">{title}</h2>
+                    <p>Autor: {author}</p>
+                    <p>Precio: ${price}</p>
                 </div>
                 <div className="cantidadProducto"><p>Cantidad: {cantidad}</p></div>
-                <div><p>Precio Total: ${precio*cantidad}</p></div>
+                <div><p>Precio Total: ${price*cantidad}</p></div>
             </div>
             <div>
                 <button onClick={()=>{removeItem(id)}}>Borrar Producto</button>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import ItemDetail from './ItemDetail';
+import { doc, getDoc,getFirestore } from 'firebase/firestore';
 
 function ItemDetailContainer() {
 
@@ -10,16 +11,22 @@ function ItemDetailContainer() {
     const [error, setError] = useState(false);
     const [item, setItem] = useState();
 
+    //aca esta la llamada al firebase
+    const coll = 'items';
+    const db = getFirestore();
+
+    const docItems = doc(db,coll,idPedido);
+
     useEffect(() => {
 
-
         setTimeout(() => {
-            fetch('https://mocki.io/v1/bb0fff3b-75fb-4f92-896c-a856433f661c')
-            .then(res => res.json())
-            .then(listaProductos => setItem(listaProductos.find((producto) => producto.id == idPedido)))
+            getDoc(docItems)
+            .then(res => {
+                setItem(res.id && {id:res.id, ...res.data()})
+            })
             .catch((error) => {
                 setError(true);
-                console("Error", error);
+                console.log("Error", error);
             })
             .finally(() => setCargando(false))
         }, 2000);

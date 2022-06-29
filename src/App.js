@@ -6,9 +6,23 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Footer from './components/Footer';
 import Cart from './components/Cart';
 import MyProvider from './context/CartContext';
+import { initializeApp } from "firebase/app";
+
+
 
 
 function App() {
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyASRoXHQdxsO6TfVWf1_5QSgoBn1lQs-Ww",
+    authDomain: "comiqueria-bareiro.firebaseapp.com",
+    projectId: "comiqueria-bareiro",
+    storageBucket: "comiqueria-bareiro.appspot.com",
+    messagingSenderId: "37129714692",
+    appId: "1:37129714692:web:9c5ba2d85508383bc50951"
+  };
+  
+  initializeApp(firebaseConfig);
 
   return (<>
 
