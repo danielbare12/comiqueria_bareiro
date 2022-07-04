@@ -13,7 +13,6 @@ function ItemDetail({producto}) {
       setProductoComprado(true)
       addItem(producto,cant);
       alert(`La cantidad de productos agregados es ${cant} de ${title}`)
-      console.log(isInCart(id))
     }
   return (
     <div className='detalleProducto'>

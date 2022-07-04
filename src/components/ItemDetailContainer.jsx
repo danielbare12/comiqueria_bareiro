@@ -19,7 +19,7 @@ function ItemDetailContainer() {
 
     useEffect(() => {
 
-        setTimeout(() => {
+        
             getDoc(docItems)
             .then(res => {
                 setItem(res.id && {id:res.id, ...res.data()})
@@ -29,9 +29,7 @@ function ItemDetailContainer() {
                 console.log("Error", error);
             })
             .finally(() => setCargando(false))
-        }, 2000);
-
-    }, [idPedido])
+        },[])
 
     return (
         <main>

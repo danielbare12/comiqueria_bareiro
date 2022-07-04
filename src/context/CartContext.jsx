@@ -25,8 +25,6 @@ function MyProvider({children}) {
           setCart(aux);
         }
 
-        
-        console.log(cart);
     };
 
     const removeItem = (id) => {
