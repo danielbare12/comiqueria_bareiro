@@ -9,16 +9,18 @@ function Cart() {
 
   const mainCart = <main className='mainCarrito'>
     {cart.map(comic => <ItemCart key={comic.id} producto={comic} />)}
-    <div>Precio Total: {precioTotal}</div>
-    <button onClick={clear}>Vaciar Carrito</button>
-    <Link to='/checkout'><button>Siguiente</button></Link>
+    <div className='carritoBotones'>
+      <div>Precio Total: {precioTotal}</div>
+      <button onClick={clear} type="button" className="btn btn-primary">Vaciar Carrito</button>
+      <Link to='/checkout'><button type="button" className="btn btn-primary">Siguiente</button></Link>
+    </div>
   </main>
 
   const vacio = <div className='tituloCarroVacio'><h1>Carrito Vacio </h1><Link to="/" >  Ir a comprar</Link></div>
 
   return (
     <>
-      {(cantidadCarrito == 0)?vacio:mainCart}
+      {(cantidadCarrito == 0) ? vacio : mainCart}
     </>
   )
 }

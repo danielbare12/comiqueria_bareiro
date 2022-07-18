@@ -6,7 +6,7 @@ function ItemCart({ producto }) {
     const {removeItem} = useContext(CartContext);
     const {id, title, author, price, cantidad , image} = producto;
     return (
-        <div className='productoCarrito'>
+        <div className="productoCarrito">
             <div>
                 <img className="imagenCarrito" src={image} alt="" />
             </div>
@@ -19,8 +19,9 @@ function ItemCart({ producto }) {
                 <div className="cantidadProducto"><p>Cantidad: {cantidad}</p></div>
                 <div><p>Precio Total: ${price*cantidad}</p></div>
             </div>
-            <div>
-                <button onClick={()=>{removeItem(id)}}>Borrar Producto</button>
+            <div className="botonQuitarProducto">
+                <button onClick={()=>{removeItem(id)}} type="button" className="btn-close" aria-label="Close"></button>
+                
             </div>
         </div>
 

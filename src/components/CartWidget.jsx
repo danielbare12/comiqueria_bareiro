@@ -8,7 +8,7 @@ function CartWidget({cantidad}) {
     {cantidad}
     </>
 
-    return (<>{(cantidad != 0) && cartImagen}</>)
+    return (<>{cartImagen}</>)
 }
 
 export default CartWidget
