@@ -1,10 +1,17 @@
-import React, { useState } from 'react'
-import IconoMas from '../imagenes/mas.png'
-import IconoMenos from '../imagenes/menos.png'
+import React, { useState } from 'react';
+import IconoMas from '../imagenes/mas.png';
+import IconoMenos from '../imagenes/menos.png';
+import { useEffect } from 'react';
 
 function ItemCount({ inicial, stock, onAdd }) {
 
     const [contador, setContador] = useState(inicial);
+    const [botonContador,setBotonContador] = useState(<button onClick={() => { onAdd(contador); resetear() }}  type="button" className="botonAgregarProducto btn btn-warning">AGREGAR AL CARRITO</button>);
+
+    useEffect(() => {
+        (contador == 0)?setBotonContador(<button onClick={() => { onAdd(contador); resetear() }}  type="button" className="botonAgregarProducto btn btn-warning" disabled>AGREGAR AL CARRITO</button>):setBotonContador(<button onClick={() => { onAdd(contador); resetear() }}  type="button" className="botonAgregarProducto btn btn-warning">AGREGAR AL CARRITO</button>)
+    }, [contador])
+    
 
     const sumar = () => {
         if (contador < stock) {
@@ -32,7 +39,7 @@ function ItemCount({ inicial, stock, onAdd }) {
             <p className='numeroContador'>{contador}</p>
             <img className='cuantificador' onClick={restar} src={IconoMenos} />
             </div>
-            <button onClick={() => { onAdd(contador); resetear() }}  type="button" className="botonAgregarProducto btn btn-warning">AGREGAR AL CARRITO</button>
+            {botonContador}
         </div>
     )
 

@@ -12,7 +12,7 @@ function ItemCart({ producto }) {
             </div>
             <div className="descripcionCarrito">
                 <div>
-                    <h2 className="tituloProducto">{title}</h2>
+                    <h2 className="tituloProductoCarrito">{title}</h2>
                     <p>Autor: {author}</p>
                     <p>Precio: ${price}</p>
                 </div>

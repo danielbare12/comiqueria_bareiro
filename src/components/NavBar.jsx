@@ -5,34 +5,33 @@ import { Link } from 'react-router-dom'
 import { CartContext } from '../context/CartContext'
 
 function NavBar() {
-  const {cantidadCarrito} = useContext(CartContext);
-  return (
-    <nav className="navbar navbar-expand-lg navbar-light miBarra">
-
-      <div className="container-fluid">
-        <div className="container">
-          <Link to='/'><MiLogo /></Link>
-
-        </div>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav">
-
-            <li className="nav-item">
-              <Link className="nav-link active botonCategoria" aria-current="page" to='/category/comic'>Comic</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link active botonCategoria" aria-current="page" to='/category/manga'>Manga</Link>
-            </li>
-          </ul>
-        </div>
-        <div className='carrito'>
-          <Link className='carritoLink' to = '/cart'>
+  const { cantidadCarrito } = useContext(CartContext);
+  return (<>
+    <nav className='miBarra'>
+      <div className='containerCarrito'>
+        <Link className='carritoLink' to='/cart'>
           <CartWidget cantidad={cantidadCarrito} />
-          </Link>
+        </Link>
 
+      </div>
+      <div className="container containerLogo">
+        <Link to='/'><MiLogo /></Link>
+
+      </div>
+
+      <div className="containerCategoria">
+
+        <div className="">
+          <Link className="navCategoria" aria-current="page" to='/category/comic'>Comic</Link>
+        </div>
+        <div className="">
+          <Link className="navCategoria" aria-current="page" to='/category/manga'>Manga</Link>
         </div>
       </div>
+
     </nav>
+
+  </>
   )
 }
 
