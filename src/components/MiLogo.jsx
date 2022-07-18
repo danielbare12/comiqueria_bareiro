@@ -1,5 +1,5 @@
 import React from 'react'
-import MiMarca from '../imagenes/logoReact.png'
+import MiMarca from '../imagenes/logoReact.png';
 
 function MiLogo() {
   return (

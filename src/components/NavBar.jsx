@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
-import MiLogo from './MiLogo'
-import CartWidget from './CartWidget'
-import { Link } from 'react-router-dom'
-import { CartContext } from '../context/CartContext'
+import MiLogo from './MiLogo';
+import CartWidget from './CartWidget';
+import { Link } from 'react-router-dom';
+import { CartContext } from '../context/CartContext';
 
 function NavBar() {
   const { cantidadCarrito } = useContext(CartContext);

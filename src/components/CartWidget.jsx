@@ -1,5 +1,5 @@
-import React from 'react'
-import Carretilla from '../imagenes/carretilla.png'
+import React from 'react';
+import Carretilla from '../imagenes/carretilla.png';
 
 function CartWidget({cantidad}) {
 

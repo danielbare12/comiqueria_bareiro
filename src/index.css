@@ -1,5 +1,6 @@
 body {
-  margin: 0;
+  padding: 0;
+  
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -7,6 +8,17 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #fffff6;
+ 
+}
+
+#root {
+  padding: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 code {
@@ -166,6 +178,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 .carritoBotones > * {
@@ -220,6 +233,7 @@ h1 {
 
 .botonTerminarCompra{
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 footer{
   padding-right: 5%;
@@ -230,6 +244,8 @@ footer{
     align-items: center;
     margin-top: 10px;
     box-shadow: 0px 5px 5px 5px black;
+    align-self: flex-end;
+    width: 100%;
 }
 
 

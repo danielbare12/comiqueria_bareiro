@@ -9,7 +9,7 @@ function ItemDetail({ producto }) {
   const { addItem, cart } = useContext(CartContext);
   const { id,title, publisher, category, description, price, author, image, stock } = producto;
   const [productoComprado, setProductoComprado] = useState(false);
-  let inicial = cart.some((itemCart) => itemCart.id == id)?(cart.find((itemCart) => itemCart.id == id)).cantidad:0;
+  let inicialCantidad = cart.some((itemCart) => itemCart.id == id)?(cart.find((itemCart) => itemCart.id == id)).cantidad:0;
 
   const onAdd = (cant) => {
     setProductoComprado(true)
@@ -30,7 +30,7 @@ function ItemDetail({ producto }) {
         <p className='categoria'>Categoria: {category}</p>
         <p className="">Precio: ${price}</p>
         <p className=''>Descripcion: {description}</p>
-        <div>{productoComprado ? <><Link className='botonCarrito' to='/cart'><button type="button" className="btn btn-primary">Terminar la compra</button></Link><Link className='botonCarrito' to='/'><button type="button" className="btn btn-primary">Seguir Comprando</button></Link></> : <ItemCount inicial={0} stock={stock - inicial} onAdd={onAdd} />}</div>
+        <div>{productoComprado ? <><Link className='botonCarrito' to='/cart'><button type="button" className="btn btn-primary">Terminar la compra</button></Link><Link className='botonCarrito' to='/'><button type="button" className="btn btn-primary">Seguir Comprando</button></Link></> : <ItemCount inicial={0} stock={stock - inicialCantidad} onAdd={onAdd} />}</div>
       </div>
     </div>
   )
