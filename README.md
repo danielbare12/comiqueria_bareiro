@@ -3,7 +3,11 @@ Proyecto de comiqueria/revisteria
 Este proyecto trata sobre un ecommerce de venta de historietas, esta dividido por categorias comics(Historietas americanas)
 y mangas(Historietas Japonesas). En el boton detalles se puede ver una descripcion con mas detalles sobre el producto.
 
-https://ibb.co/7bspFzg
+Librerias agregadas:
+
+Bootstrap: El bootstrap normal para agregarle algunos detalles
+Swalalert2: para agregarle las alertas personalizadas
+React-tooltip: para agregarle tooltip al formulario
 
 # Getting Started with Create React App
 

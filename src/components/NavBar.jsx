@@ -19,16 +19,16 @@ function NavBar() {
 
       </div>
 
-      <div className="containerCategoria">
-
-        <div className="">
-          <Link className="navCategoria" aria-current="page" to='/category/comic'>Comic</Link>
+      
+        <div className="containerCategoria nav-item dropdown">
+          <div className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Categorias
+          </div>
+          <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><Link className="dropdown-item " aria-current="page" to='/category/comic'>Comic</Link></li>
+            <li><Link className="dropdown-item " aria-current="page" to='/category/manga'>Manga</Link></li>
+          </ul>
         </div>
-        <div className="">
-          <Link className="navCategoria" aria-current="page" to='/category/manga'>Manga</Link>
-        </div>
-      </div>
-
     </nav>
 
   </>
