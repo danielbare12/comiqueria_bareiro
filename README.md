@@ -5,9 +5,13 @@ y mangas(Historietas Japonesas). En el boton detalles se puede ver una descripci
 
 Librerias agregadas:
 
-Bootstrap: El bootstrap normal para agregarle algunos detalles
-Swalalert2: para agregarle las alertas personalizadas
-React-tooltip: para agregarle tooltip al formulario
+Bootstrap: El bootstrap normal para agregarle algunos detalles.
+
+Swalalert2: para agregarle las alertas personalizadas.
+
+React-tooltip: para agregarle tooltip al formulario.
+
+<img src="https://github.com/danielbare12/comiqueria_bareiro/blob/main/navegacionWeb.gif"/>
 
 # Getting Started with Create React App
 
